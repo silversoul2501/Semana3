@@ -1,0 +1,34 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu *ngIf="document.body.getAttribute('data-usuario-logueado') === 'true'" contentId="main-content" type="overlay" class="menu-estilo" mode="ios" menuId="first">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menú</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="menu-contenido">
+        <ion-list class="menu-lista">
+          <ion-item (click)="navigateAndClose('/catalogo')">
+            <ion-label>Catálogo</ion-label>
+          </ion-item>
+          <ion-item (click)="navigateAndClose('/ofertas')">
+            <ion-label>Ofertas</ion-label>
+          </ion-item>
+          <ion-item (click)="navigateAndClose('/perfil-usuario')">
+            <ion-label>Perfil Usuario</ion-label>
+          </ion-item>
+          <ion-item (click)="navigateAndClose('/carrito')">
+            <ion-label>Carrito</ion-label>
+          </ion-item>
+          <ion-item (click)="cerrarSesion()">
+            <ion-icon name="log-out-outline" slot="start"></ion-icon>
+            <ion-label>Cerrar sesión</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

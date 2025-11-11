@@ -1,0 +1,47 @@
+.carrito-vacio {
+  margin-top: 30%;
+  text-align: center;
+  color: #000;
+
+  ion-icon {
+    font-size: 64px;
+    color: #000;
+  }
+
+  h2 {
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+  }
+}
+
+ion-item {
+  --color: #000;
+  color: #000;
+
+  ion-label {
+    color: #000;
+  }
+
+  p, h2, h3, h4 {
+    color: #000;
+  }
+
+  .precio {
+    color: #000;
+  }
+}
+
+.total-linea {
+  color: #000;
+}
+
+ion-note {
+  color: #000 !important;
+}

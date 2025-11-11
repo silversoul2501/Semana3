@@ -1,0 +1,201 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #5ab025;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+::ng-deep mat-form-field {
+  background-color: transparent;
+  color: white;
+  width: 100%;
+
+  .mat-form-field-wrapper {
+    padding: 0 !important;
+  }
+
+  .mat-form-field-flex {
+    background-color: #30d324 !important; /* mismo color que botón limpiar */
+    border-radius: 6px;
+    padding-left: 10px;
+  }
+
+  .mat-form-field-label {
+    color: #2e2e2e !important;
+  }
+
+  .mat-input-element {
+    color: #2e2e2e !important; /* texto oscuro para contraste */
+  }
+
+  .mat-datepicker-toggle {
+    color: #2e2e2e !important; /* icono de calendario */
+  }
+
+  .mat-form-field-underline {
+    display: none;
+  }
+
+  ::placeholder {
+    color: #2e2e2e !important;
+    opacity: 1;
+  }
+
+  .mat-form-field-infix {
+    background-color: #2672ff !important;
+    border-radius: 6px;
+    padding: 12px;
+  }
+
+  input[matInput] {
+    background-color: #3c1ea0 !important;
+    color: #ba365b !important;
+    border-radius: 6px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.fecha-label {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: #ff0404;
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 0;
+  text-align: left;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide {
+  animation: slide-right 1s ease-in-out;
+}
+
+
+@keyframes fade-slide-down {
+  0% {
+    opacity: 0.2;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  padding-left: 8px;
+  animation: fade-slide-down 1.5s ease-out;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+// Botones personalizados para temática de libros
+.btn-invitado {
+  --background: #ff7043; /* Naranja vivo */
+  --color: #fffaf0;       /* Crema claro */
+  font-weight: bold;
+}
+
+.btn-limpiar {
+  --background: #ffa726; /* Naranja más suave */
+  --color: #2e2e2e;       /* Gris oscuro */
+}
+
+.btn-guardar {
+  --background: #43a047; /* Verde intenso */
+  --color: #ffffff;
+}
+
+
+// Fondo temático tipo papel
+.fondo-papel {
+  --background: #f6b347 !important; /* tono similar al de la imagen */
+  background: #f6b347 !important;
+
+  background-image: none; /* Limpieza visual */
+}
+
+ion-card,
+ion-list {
+  background-color: transparent !important;
+  --background: transparent !important;
+}
+
+ion-card-title,
+ion-card-subtitle,
+ion-label,
+.fecha-label {
+  color: #3e2723 !important; /* Marrón profundo */
+}
+
+ion-input,
+.mat-input-element {
+  color: #ffffff !important;
+}
+
+ion-item {
+  --background: #ffa726 !important; /* mismo color que botón limpiar */
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+input[matinput] {
+  background-color: #ffa726 !important;
+  color: #2e2e2e !important;
+  border-radius: 6px;
+  padding: 12px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  display: block;
+}
+
+input[matinput]::placeholder {
+  color: #2e2e2e !important;
+  opacity: 1;
+}

@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Detalle del Libro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo-papel">
+  <ion-card>
+    <ion-img [src]="imagen" class="libro-imagen"></ion-img>
+    <ion-card-header [ngClass]="titulo === 'Cien años de soledad' ? 'fondo-oscuro' : ''">
+      <ion-card-title class="titulo-libro">{{ titulo }}</ion-card-title>
+      <ion-card-subtitle>{{ autor }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content [ngClass]="titulo === 'Cien años de soledad' ? 'fondo-oscuro' : 'contenido-libro'">
+      {{ descripcion }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

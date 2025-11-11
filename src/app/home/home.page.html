@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <div class="home-title">
+        <ion-icon name="home-outline" style="vertical-align: middle; margin-right: 8px;" (click)="irAlInicio()"></ion-icon>
+        Inicio
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="fondo-papel">
+
+  <ion-card color="primary" class="ion-text-center">
+    <ion-card-header>
+      <ion-card-title>Bienvenido, {{ usuario }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Regístrate para iniciar sesión.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list class="ion-padding">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input #nombreInput [(ngModel)]="nombre" name="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input #apellidoInput [(ngModel)]="apellido" name="apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Nivel Educacional</ion-label>
+      <ion-select [(ngModel)]="nivel" name="nivel">
+        <ion-select-option value="Básico">Básico</ion-select-option>
+        <ion-select-option value="Medio">Medio</ion-select-option>
+        <ion-select-option value="Superior">Superior</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class="ion-margin">
+      <label class="fecha-label">Fecha de Nacimiento</label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="fechaNacimiento" name="fechaNacimiento"
+             placeholder="dd/mm/aaaa"
+             style="width: 100%; background-color: #1e1e1e; color: white; border: none; padding: 16px 12px; border-radius: 6px; font-size: 16px;" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="correo" name="correo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="contrasena" name="contrasena"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="confirmarContrasena" name="confirmarContrasena"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" class="btn-limpiar" (click)="limpiarCampos()">Limpiar</ion-button>
+
+    <ion-button expand="block" class="btn-guardar" (click)="guardarYIrAlCatalogo()">
+      Guardar y Ver Catálogo
+    </ion-button>
+
+    <div *ngIf="mensajeError" class="mensaje-error">
+      <ion-text color="danger">
+        <p>{{ mensajeError }}</p>
+      </ion-text>
+    </div>
+  </ion-list>
+</ion-content>

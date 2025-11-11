@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Catálogo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">catalogo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngFor="let libro of libros" style="position: relative;">
+    <ion-badge color="danger" *ngIf="libro.precioOferta"
+           style="position: absolute; top: 10px; left: 10px; z-index: 10;">
+      ¡En Oferta!
+    </ion-badge>
+    <ion-button
+      fill="solid"
+      shape="round"
+      size="small"
+      class="icono-carrito"
+      (click)="agregarAlCarrito(libro)"
+      style="position: absolute; top: 12px; right: 12px; z-index: 10;">
+      <ion-icon slot="icon-only" name="cart-outline" color="light"></ion-icon>
+    </ion-button>
+    <ion-img [src]="libro.imagen" class="zoom-img"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{ libro.titulo }}</ion-card-title>
+      <ion-card-subtitle>{{ libro.autor }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{ libro.descripcion }}
+      <p *ngIf="!libro.precioOferta">
+        <strong>Precio:</strong> {{ libro.precio | currency:'CLP':'symbol':'1.0-0' }}
+      </p>
+      <p *ngIf="libro.precioOferta">
+        <strong>Precio:</strong>
+        <span style="text-decoration: line-through;">
+          {{ libro.precio | currency:'CLP':'symbol':'1.0-0' }}
+        </span>
+        <span style="color: red; font-weight: bold;">
+          {{ libro.precioOferta | currency:'CLP':'symbol':'1.0-0' }}
+        </span>
+      </p>
+      <ion-button
+        expand="block"
+        class="btn-vermas"
+        [routerLink]="['/detalle-libro']"
+        [state]="{
+          titulo: libro.titulo,
+          autor: libro.autor,
+          descripcion: libro.descripcion,
+          imagen: libro.imagen
+        }">
+        Ver más
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

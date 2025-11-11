@@ -1,0 +1,25 @@
+.zoom-img {
+  transition: transform 0.3s ease-in-out;
+}
+.zoom-img:hover {
+  transform: scale(1.05);
+}
+
+.icono-carrito {
+  --background: #ff7043;
+  --color: #fffaf0;
+  font-weight: bold;
+}
+
+ion-card {
+  background-color: #ffa726;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #2e2e2e;
+}
+
+ion-button.btn-vermas {
+  --background: #ff7043;
+  --color: #fff;
+  font-weight: bold;
+}

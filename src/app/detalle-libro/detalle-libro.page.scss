@@ -1,0 +1,51 @@
+.libro-imagen {
+  max-height: 250px;
+  object-fit: contain;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.titulo-libro {
+  font-size: 1.4em;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.contenido-libro {
+  font-size: 0.95em;
+  padding-top: 10px;
+  line-height: 1.5;
+  color: black;
+}
+
+.zoom-img {
+  transition: transform 0.3s ease;
+}
+
+.zoom-img:hover,
+.zoom-img:active {
+  transform: scale(1.05);
+}
+
+.fondo-papel {
+  --background: #f6b347 !important;
+  background: #f6b347 !important;
+  background-image: none;
+}
+
+.fondo-oscuro {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 12px;
+  color: #ffffff !important;
+}
+
+.fondo-oscuro .titulo-libro {
+  margin-top: 220px;
+}
+
+ion-card-content {
+  color: black;
+}

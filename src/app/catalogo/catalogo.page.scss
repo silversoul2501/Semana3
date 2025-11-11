@@ -1,0 +1,36 @@
+.zoom-img {
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.zoom-img:hover,
+.zoom-img:active {
+  transform: scale(1.05);
+}
+
+.fondo-papel {
+  --background: #f6b347 !important; /* fondo madera anaranjado */
+  background: #f6b347 !important;
+  background-image: none;
+}
+
+ion-card {
+  background-color: #ffa726 !important; /* fondo de tarjeta similar al botón limpiar */
+  color: #2e2e2e !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+ion-card-title,
+ion-card-subtitle,
+ion-label {
+  color: #2e2e2e !important;
+}
+
+ion-button {
+  --background: #ff7043; /* mismo color que botón de invitado */
+  --color: #fffaf0;
+  font-weight: bold;
+}

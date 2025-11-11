@@ -1,0 +1,37 @@
+ion-content {
+  --background: #f5b342;
+}
+
+ion-list {
+  background: #ff7043;
+  border-radius: 8px;
+  margin: 16px;
+  padding: 8px;
+}
+
+ion-item {
+  --background: transparent;
+  --min-height: 48px;
+}
+
+ion-label, ion-text {
+  color: #000;
+}
+
+ion-button {
+  margin-top: 16px;
+  --background: #ff7043;
+  --color: #fff;
+  --border-radius: 6px;
+}
+
+ion-text[color="danger"], ion-text[color="success"] {
+  display: block;
+  margin-top: 12px;
+  margin-inline: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.3);
+}
